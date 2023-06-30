@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- table : 표 -->
+    <!-- table row : 행 -->
+    <!-- table head : 행의 제목 -->
+    <!-- table data : 행의 값 -->
+    <!-- (중요)테이블 안에 tbody태그를 가장 먼저 써야됨 -->
+    <table>
+      <tbody>
+        <tr>
+          <th>이름</th>
+          <td>최민지</td>
+        </tr>
+        <tr>
+          <th>나이</th>
+          <td>37</td>
+        </tr>
+        <tr>
+          <th>연락처</th>
+          <td>010-8396-1201</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+
+    <!-- 여러건의 데이터를 표시 -->
+    <!-- thead : 머릿말 -->
+    <!-- tbody : 데이터 -->
+    <!-- table border = 숫자 : 표 디자인 (권장하지 않음/안씀) -->
+    <table border="5" width="500">
+      <!-- <colgroup>
+        <col width="40%" />
+        <col width="20%" />
+        <col width="*" />
+      </colgroup> -->
+      <!-- 테이블의 너비값을 현재는 지정해주지 않음, 다른 프로그램에서 하라는 -->
+      <thead>
+        <th>이름</th>
+        <th>나이</th>
+        <th>연락처</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>최민지</td>
+          <td>30</td>
+          <td>010-8396-1201</td>
+        </tr>
+        <tr>
+          <td>John Doe</td>
+          <td>33</td>
+          <td>010-8396-1201</td>
+        </tr>
+        <tr>
+          <td>김태민</td>
+          <td>50</td>
+          <td>010-8396-1201</td>
+        </tr>
+      </tbody>
+      <thead>
+        <!-- 요약, 데이터건수, 페이징(1~10, < > , [5]) -->
+      </thead>
+      <tfoot>
+        <tr>
+          <!-- span(칸 길이 늘리기) -->
+          <!-- colume span -->
+          <td colspan="3">
+            <strong>3</strong>
+            <em>건 입니다.</em>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <hr />
+
+    <table border="1">
+      <!-- bgcolor="#f0f0f0" cellspacing="10" collpadding="5" -->
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">Data 1</td>
+          <td>Data 1</td>
+        </tr>
+        <tr>
+          <td>Data 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

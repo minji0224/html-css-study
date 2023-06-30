@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*  자손(decendant) 선택자 :
+      부모선택자 자손선택자 자손... 자손...
+      header 태그 밑에 모든 h1들을 다 선택하는 것 */
+      header h1 {
+        color: red;
+      }
+      section h1 {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 자손과 자식 선택자 -->
+    <!-- div : 최상위
+       h1, h2, ul : 최상위의 자식     (div 태그 바로 밑에 있는 태그들)
+       li :         자손             (자식태그 안에 들어와있는 태그들)-->
+    <div>
+      <h1></h1>
+      <h2></h2>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <header>
+      <h1>Lorem, ipsum.</h1>
+      <nav>
+        <h1>Navigation</h1>
+      </nav>
+    </header>
+    <section>
+      <h1>Lorem, ipsum.</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
+        nostrum inventore quisquam assumenda enim quas sint eos. Aliquam nostrum
+        commodi voluptatem accusantium aperiam ipsa quisquam, dolor iusto saepe
+        ratione nobis?
+      </p>
+    </section>
+  </body>
+</html>

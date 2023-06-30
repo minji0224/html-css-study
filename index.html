@@ -4,17 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minji's cook</title>
+    <style>
+      body > h1 {
+        background-color: #5C5242;
+        color: #ffffff;
+        width: 63.5rem;
+        font-size: 5rem;
+        line-height: 2;
+      }
+    
+      .meatpie {
+        background-color: #6A4A29;
+        color: #ffffff;
+        font-size: 2rem;
+        line-height: 1.8;
+      }
+      .papa {
+        background-color: #6A4A29;
+        color: #ffffff;
+        font-size: 2rem;
+        line-height: 1.8;
+      }
+      .appleju {
+        background-color: #6A4A29;
+        color: #ffffff;
+        font-size: 2rem;
+        line-height: 1.8;
+      }
+      
+      table > thead {
+        background-color: #f1e3d3;
+        color: #252422;
+      }
+      header > h3 {
+        background-color: #ccc5b9;
+        width: 5.2rem;
+      }
+
+    
+   
+    </style>
   </head>
   <body>
-    <h1>내가 좋아하는 요리 레시피</h1>
-    <li title="본문으로 이동"><a href="#meatpie">고기파이</a></li>
-    <li title="본문으로 이동"><a href="#papa">해물파전</a></li>
-    <li title="본문으로 이동"><a href="#appleju">사과당근주스</a></li>
+    <h1>
+      내가 좋아하는 요리 레시피
+    </h1>
+  
+    <ul>
+    <li title="본문으로 이동"><a href="#meatpie" class="meatpie" >고기파이</a></li>
+    <li title="본문으로 이동"><a href="#papa" class="papa" >해물파전</a></li>
+    <li title="본문으로 이동"><a href="#appleju" class="appleju">사과당근주스</a></li>
+  </ul>
     <hr />
     <article>
       <section>
         <p id="meatpie">
-        <header><h2 title="상세레시피로 이동"><a href="https://www.10000recipe.com/recipe/3597794" target="_blank">고기파이</a></h2></header>
+        <header><h2 title="상세레시피로 이동"><a href="https://www.10000recipe.com/recipe/3597794" target="_blank" class="meatpie">고기파이</a></h2></header>
         <img src="https://beyondflourblog.com/wp-content/uploads/2021/03/Gluten-Free-Tourtiere-3.jpg" 
         alt="meatpie"
         width="500">
@@ -74,7 +119,8 @@
       <hr />
         <section>
           <p id="papa">
-        <header><h2 title="상세레시피로 이동"><a href="https://www.10000recipe.com/recipe/6879050" target="_blank">해물파전</a></h2></header>
+        <header><h2 title="상세레시피로 이동"><a href="https://www.10000recipe.com/recipe/6879050" target="_blank" class="papa">
+          해물파전</a></h2></header>
         <img src="img/papa.png" alt="해물파전">
         <br>
           바삭한 해물파전<br />
@@ -124,7 +170,8 @@
         <hr />
         <section>
           <p id="appleju">
-            <header><h2 title="상세레시피로 이동"><a href="https://www.10000recipe.com/recipe/6867727" target="_blank">당근사과주스</a></h2></header>
+            <header><h2 title="상세레시피로 이동"><a href="https://www.10000recipe.com/recipe/6867727" target="_blank"
+              class="appleju">당근사과주스</a></h2></header>
             <img src="img/carrot.jpg"
              alt="당근사과주스"
              width="500">

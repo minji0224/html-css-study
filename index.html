@@ -5,36 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minji's cook</title>
     <style>
-      html, body {
-        background-color: #f8edeb;
+      * {
+        box-sizing: border-box;
       }
-      
-      body  > h1 {
+
+      :root {
+        --background-color:#f8edeb;
+        --font-color:#ffffff;
+        --defult-font-size:14px;
+      }
+
+      html, body {
+        background-color: var(--background-color);
+        line-height: 2rem;
+        margin-left: 0.5rem;
+      }      
+
+      .main_text {
+        text-align: center;
+        width: 800px;
+        margin: 0 auto;
         background-color: #5C5242;
         color: #ffffff;
-        width: 63.5rem;
-        font-size: 5rem;
-        line-height: 2;
+        width: 60.4rem;
+        font-size: 4rem;
+        border-radius: 10px;
+        line-height: 8rem;
+      }
+
+  
+      .main_list {
+        list-style: none;
+        line-height: 2.8rem;
+        width: 60rem;      
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .main_list > li{    
+        display: inline;
+        width: 180px;
+        margin: 0 auto;
+      }
+     
+      .main_list > li > a {
+        text-decoration: none;
+        background-color: #6A4A29;
+        color: #fff;
+        border-radius: 30px;
+        font-size: 1.3rem;
+        display: inline-block;
+        width: 10rem;
+        
       }
     
-      .meatpie {
+      .main_name > a{
+        text-align: center;
+        text-decoration: none;
         background-color: #6A4A29;
         color: #ffffff;
-        font-size: 2rem;
-        line-height: 1.8;
+        font-size: 1.8rem;
+        border-radius: 30px;
+        display: inline-block;
+        width: 15rem;
       }
-      .papa {
-        background-color: #6A4A29;
-        color: #ffffff;
-        font-size: 2rem;
-        line-height: 1.8;
+
+
+      table {
+        width: 500px;
+        border: 1px solid #d4a373;
       }
-      .appleju {
-        background-color: #6A4A29;
-        color: #ffffff;
-        font-size: 2rem;
-        line-height: 1.8;
-      }
+     
       
       table > thead {
         background-color: #f1e3d3;
@@ -50,35 +91,48 @@
         color: white;
       }
 
+      .list_of_ingredients::before {
+        content: "✔";
+        color: red;
+      }
+
+      .cooking_order::before {
+        content: "🕒";
+      }
+
+
     
    
     </style>
   </head>
   <body>
-    <h1>
+    <article>
+    <header>
+      <br>
+      <br>
+      <br>
+    <h1 class="main_text">
       내가 좋아하는 요리 레시피
     </h1>
-  
-    <ul>
-     <li title="본문으로 이동"><a href="#meatpie" class="meatpie" >고기파이</a></li>
-     <li title="본문으로 이동"><a href="#papa" class="papa" >해물파전</a></li>
-     <li title="본문으로 이동"><a href="#appleju" class="appleju">사과당근주스</a></li>
+    <br>
+    <ul class="main_list">
+     <li title="본문으로 이동"><a href="#meatpie">고기파이</a></li>
+     <li title="본문으로 이동"><a href="#papa">해물파전</a></li>
+     <li title="본문으로 이동"><a href="#appleju">사과당근주스</a></li>
     </ul>
-    <hr />
-
-    <article>
+  </header>    
       <section>
-        <p id="meatpie">
-        <header><h2 title="상세레시피로 이동"><a href="https://www.10000recipe.com/recipe/3597794" target="_blank" class="meatpie">고기파이</a></h2></header>
+        <h2 title="상세레시피로 이동" class="main_name"><a href="https://www.10000recipe.com/recipe/3597794" target="_blank">고기파이</a></h2></header>
         <img src="https://beyondflourblog.com/wp-content/uploads/2021/03/Gluten-Free-Tourtiere-3.jpg" 
         alt="meatpie"
         width="500">
         <br>
-        <strong>겉은 바삭! 속 안은 매콤</strong>하고 부드러워요~ 성장기 아이들에게 좋은
+        <p>겉은 바삭! 속 안은 매콤하고 부드러워요~ 성장기 아이들에게 좋은
         고기파이!
+      </p>
 
-        <header><h3>재료 목록</h3></header>
-        <table border="1" width="500">
+        <h3 class="list_of_ingredients">재료 목록</h3>
+        <table>
           <thead>
             <th>재료</th>
             <th>용량</th>
@@ -107,7 +161,7 @@
           </tbody>
         </table>
 
-        <header><h3>조리 순서</h3></header>
+        <h3 cooking_order>조리 순서</h3>
         <ol>
         <li>
         돼지고기 안심은 칼을 이용해서 잘게 다진 후 청주, 생강즙, 소금,
@@ -123,21 +177,21 @@
         분량의 재료를 넣고 소스를 만들어 주세요. 한국인의 입맛에 맞게 약간
         매콤하게 만들었습니다.
         </li>
-        </ol>
-        </p>
+        </ol>    
       </section>
-      <hr />
+
         <section>
-          <p id="papa">
-        <header><h2 title="상세레시피로 이동"><a href="https://www.10000recipe.com/recipe/6879050" target="_blank" class="papa">
-          해물파전</a></h2></header>
+     <h2 title="상세레시피로 이동" class="main_name"><a href="https://www.10000recipe.com/recipe/6879050" target="_blank">
+          해물파전</a></h2>
         <img src="img/papa.png" alt="해물파전">
         <br>
+        <p>
           바삭한 해물파전<br />
           비오는 날 해물파전<br />
           간단한 술안주 해물파전<br />
-        <header><h3>재료 목록</h3></header>    
-        <table border="1" width="500">
+        </p>
+        <h3 class="list_of_ingredients">재료 목록</h3>
+        <table>
           <thead>
             <th>재료</th>
             <th>용량</th>
@@ -153,7 +207,8 @@
               <td><strong>물</strong></td>
               <td><em>1/2컵</em></td>
             </tr>
-            <tr>
+            <tr>재료목록
+
               <td><strong>오징어</strong></td>
               <td><em>1/2마리</em></td>
             </tr>
@@ -163,7 +218,7 @@
             </tr>
           </tbody>
         </table> 
-        <header><h3>조리 순서</h3></header>
+       <h3 class="cooking_order">조리 순서</h3>
           <ol>
             <li>쪽파는 500원짜리 동전크기로 준비하고,<br />
               흐르는 물에 뿌리부분 껍질 하나씩 벗기며 씻어주고 뿌리 끝부분 잘라주세요.<br />
@@ -175,22 +230,22 @@
               <li>완성된 반죽에 부추+오징어 섞어 주세요.(순서 3번에 4,5번을 혼합)<br />
                 팬에 식용유를 두르고 달궈지면 혼합된 반죽을 올려 강불에 나두고 바삭하게 부치면 완성입니다.</li>
           </ol>
-        </p>
         </section>
         <hr />
         <section>
-          <p id="appleju">
-            <header><h2 title="상세레시피로 이동"><a href="https://www.10000recipe.com/recipe/6867727" target="_blank"
-              class="appleju">당근사과주스</a></h2></header>
+            <h2 title="상세레시피로 이동" class="main_name"><a href="https://www.10000recipe.com/recipe/6867727" target="_blank"
+              class="main_name">당근사과주스</a></h2>
             <img src="img/carrot.jpg"
              alt="당근사과주스"
              width="500">
             <br />
+            <p>
           미세먼지가 심한 요즘, 눈 건강도 신경쓰이시죠?<br />
-그래서 눈 건강을 위한 당근사과주스를 가지고 왔습니다. <br />
-건강한 눈을 위한 선택! 당근사과주스 한잔은 어떠세요?
-        <header><h3>재료 목록</h3></header>     
-        <table border="1" width="500">
+          그래서 눈 건강을 위한 당근사과주스를 가지고 왔습니다. <br />
+          건강한 눈을 위한 선택! 당근사과주스 한잔은 어떠세요?
+          </p>
+   <h3 class="list_of_ingredients">재료 목록</h3> 
+        <table>
           <thead>
             <th>재료</th>
             <th>용량</th>
@@ -218,18 +273,17 @@
             </tr>
           </tbody>
         </table>
-  <header><h3>요리 순서</h3></header>
+<h3 class="cooking_order">요리 순서</h3>
     <ol>
       <li>당근과 사과의 껍질을 벗겨주시고 토막토막 잘라주세요.</li>
       <li>믹서기 통에 토막낸 당근과 사과를 담고 <br />
         꿀과 물을 레몬즙을 취향에 맞게 부어줍니다.</li>
-    </ol>
-  </p>   
+    </ol> 
     </section>
-  </article>
-    <hr />
+
     <footer>
       <address>minj22222c@gmail.com</address>
     </footer>
+  </article>
   </body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        /* 화면에서 숨김 display:none; */
+
+        /* display: none; */
+
+        visibility: hidden;
+        /* 화면에서 숨기지만 공간은 차지 */
+      }
+
+      h1:hover + div {
+        /* 
+        div는 기본이 block(위에서 아래로)
+        너비가 부모의 100%, 높이는 컨텐트 높이 */
+
+        /* display: block; */
+
+        visibility: visible;
+      }
+
+      li {
+        /* li는 원래 block인데 inline 바꾸는 것 
+        inline은 크기 지정 안됨 */
+        display: inline;
+      }
+
+      span {
+        /* inline 크기를 지정하고 싶으면
+        display: inline-block; */
+        display: inline-block;
+        width: 200px;
+        height: 100px;
+
+        /* 좌우 정렬 text-align */
+        text-align: center;
+
+        border: 1px solid black;
+      }
+
+      span:first-of-type {
+        text-decoration: line-through;
+        text-decoration: underline;
+        text-decoration-style: dashed;
+        text-decoration-color: blue;
+        text-decoration-thickness: 10px;
+      }
+
+      span:nth-of-type(2) {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <div>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias optio
+      accusantium amet nam error ipsum quasi exercitationem ab rem, itaque
+      deleniti veniam suscipit tenetur pariatur inventore sunt, voluptatum
+      cupiditate recusandae.
+    </div>
+    <ul>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+    </ul>
+    <span>Lorem, ipsum.</span>
+    <span>Lorem, ipsum.</span>
+  </body>
+</html>

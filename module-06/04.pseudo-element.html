@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 의상요소 */
+
+      /* 첫번째 글자 선택 */
+      p::first-letter {
+        font-size: 3rem;
+      }
+
+      p::first-line {
+        color: green;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li::before {
+        /* content : 윈도우 + . */
+        content: "✔";
+        margin-right: 0.5rem;
+        color: green;
+      }
+
+      li::after {
+        content: "❤";
+        color: red;
+        margin-left: 0.5rem;
+      }
+
+      /* 요소를 선택해서 드래그 했을 때 적용되는 스타일 */
+      p::selection {
+        background-color: gold;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi vitae,
+      rerum minima quod dolore in saepe tenetur sed perspiciatis est totam
+      accusamus architecto laborum possimus pariatur veritatis. Quisquam, enim
+      eaque.
+    </p>
+    <h1>할 일</h1>
+    <ul>
+      <li>HTML태그 정리하기</li>
+      <li>ㅇㅇㅇ</li>
+    </ul>
+  </body>
+</html>

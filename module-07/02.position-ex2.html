@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+        border: 1px solid black;
+        /* 자식에 absolute를 쓰면 고정되기 때문에 다음에 나오는 태그가 겹치게 된다. 
+        그래서 부모인 div의 relative에 높이 값을 지정해줘야 겹치지 않고 내려간다. */
+        height: 100px;
+      }
+      p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+        officiis eos tempore. Expedita dolorum minima dolores sint distinctio!
+        Excepturi praesentium commodi, sint officia aspernatur saepe ducimus
+        soluta autem. Consequatur, a.
+      </p>
+    </div>
+    <h1>Lorem, ipsum dolor.</h1>
+  </body>
+</html>

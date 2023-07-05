@@ -4,38 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minji's cook</title>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       * {
         box-sizing: border-box;
       }
 
       :root {
-        --background-color:#f8edeb;
-        --font-color:#ffffff;
-        --defult-font-size:14px;
+        --background-color: #f8edeb;
+        --font-color: #ffffff;
+        --defult-font-size: 14px;
       }
 
-      html, body {
+      html,
+      body {
         /* background-color: var(--background-color); */
         /* height: 2000px; */
         line-height: 2rem;
         margin-left: 0.5rem;
-        font-family: 'Gowun Dodum', sans-serif;
-        font-family: 'Noto Sans KR', sans-serif;
-        background: center/cover no-repeat url(./img/istockphoto-1465053603-170667a.webp);
-        width: 100%;images.jpg
+        font-family: "Gowun Dodum", sans-serif;
+        font-family: "Noto Sans KR", sans-serif;
+        background: center/cover no-repeat
+          url(./img/istockphoto-1465053603-170667a.webp);
+        width: 100%;
         height: 100vh;
         background-attachment: fixed;
-      }  
+      }
+
       section {
         text-align: center;
         width: 800px;
         margin: 0 auto;
-
       }
 
       .main_nav {
@@ -43,8 +51,8 @@
         그래서 헤더 밖으로 빼고 했음 */
         position: sticky;
         top: 0;
+        z-index: 100;
       }
-
 
       p::selection {
         background-color: #ff6b35;
@@ -55,7 +63,7 @@
         text-align: center;
         width: 800px;
         margin: 0 auto;
-        background-color: #5C5242;
+        background-color: #5c5242;
         color: #ffffff;
         width: 60.4rem;
         font-size: 4rem;
@@ -64,73 +72,99 @@
         padding: 2rem;
       }
 
-  
       .main_list {
         list-style: none;
         line-height: 2.8rem;
-        width: 60rem;      
+        width: 100%;
         margin: 0 auto;
         text-align: center;
+        display: flex;
+        justify-content: space-evenly;
       }
 
-      .main_list > li{    
+      .main_list > li {
         display: inline;
-        width: 180px;
-        margin: 0 auto;
       }
 
       .main_list > li > a:hover {
         color: #540b0e;
       }
-     
+
       .main_list > li > a {
         text-decoration: none;
-        background-color: #6A4A29;
+        background-color: #6a4a29;
         color: #fff;
         border-radius: 30px;
         font-size: 1.3rem;
         display: inline-block;
         width: 10rem;
         cursor: pointer;
-        
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
       }
 
       .main_name > a:hover {
         color: #cb997e;
       }
-    
-      .main_name > a{
-        text-align: center;
-        text-decoration: none;
-        background-color: #6A4A29;
-        color: #ffffff;
-        font-size: 1.8rem;
-        border-radius: 30px;
-        display: inline-block;
-        width: 15rem;
-        padding: 1rem;
-        cursor: pointer;
+
+      .main_name {
+        margin-bottom: 0;
       }
 
-      .list_of_ingredients, .main_cooking_order {
+      .main_name > a {
+        text-align: center;
+        text-decoration: none;
+        background-color: #e9edc9b1;
+        color: #081c15;
+        font-size: 1.8rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: inline-block;
+        width: 15rem;
+        padding: 1.5rem 1.7rem 1rem 1.7rem;
+        cursor: pointer;
+        display: block;
+        margin-left: 2rem;
+      }
+
+      .list_of_ingredients,
+      .main_cooking_order {
         background-color: #fed0bb;
         padding: 0.6rem;
         text-align: left;
       }
 
+      .img {
+        /* 이미지를 감싸고 있는 부모에 
+        overflow:hidden을 해줘야 이미지가 넘치지 않고 안으로 들어감 */
+        position: relative;
+        width: 800px;
+        height: 500px;
+        border-radius: 10px;
+        background-color: #e9edc9b1;
+        padding: 0.6rem;
+        overflow: hidden;
+      }
+
+      .img img {
+        /* 이것은 이미지가 부모의 값에 100%를 차지하겠다는 말
+        여백을 주고싶으면 부모에 패딩값을 주는 것 */
+        height: 100%;
+        width: 100%;
+      }
 
       table {
         width: 800px;
         border: 1px solid #d4a373;
         border-collapse: collapse;
-        
       }
 
-      th, td {
+      th,
+      td {
         border: 1px solid #d4a373;
         padding: 0.5rem;
       }
-     
+
       table > thead {
         background-color: #f1e3d3;
         color: #252422;
@@ -158,41 +192,45 @@
         margin: 0;
       }
 
-
       footer {
         clear: both;
         text-align: center;
-      }  
-   
+      }
     </style>
   </head>
   <body>
     <article>
-    <header>
-      <br>
-      <br>
-      <br>
-    <h1 class="main_text">
-      내가 좋아하는 요리 레시피
-    </h1>
-    <br>
-  </header>
-  <nav class="main_nav">
-    <ul class="main_list">
-     <li title="본문으로 이동"><a href="#meatpie">고기파이</a></li>
-     <li title="본문으로 이동"><a href="#papa">해물파전</a></li>
-     <li title="본문으로 이동"><a href="#appleju">사과당근주스</a></li>
-    </ul>
-  </nav>    
+      <header>
+        <br />
+        <br />
+        <br />
+        <h1 class="main_text">내가 좋아하는 요리 레시피</h1>
+        <br />
+      </header>
+      <nav class="main_nav">
+        <ul class="main_list">
+          <li title="본문으로 이동"><a href="#meatpie">고기파이</a></li>
+          <li title="본문으로 이동"><a href="#papa">해물파전</a></li>
+          <li title="본문으로 이동"><a href="#appleju">사과당근주스</a></li>
+        </ul>
+      </nav>
       <section>
-        <h2 title="상세레시피로 이동" class="main_name" id="meatpie"><a href="https://www.10000recipe.com/recipe/3597794" target="_blank">고기파이</a></h2></header>
-        <img src="img/meatpie.jpg" 
-        alt="meatpie">
-        <br>
-        <p>겉은 바삭! 속 안은 매콤하고 부드러워요~ 성장기 아이들에게 좋은
-        고기파이!
-      </p>
-        <h3 class="list_of_ingredients"><i class = "xi-cart-remove"> 재료 목록</i></h3>
+        <h2 title="상세레시피로 이동" class="main_name" id="meatpie">
+          <a href="https://www.10000recipe.com/recipe/3597794" target="_blank"
+            >고기파이</a
+          >
+        </h2>
+        <div class="img">
+          <img src="img/meatpie.jpg" alt="meatpie" />
+        </div>
+        <br />
+        <p>
+          겉은 바삭! 속 안은 매콤하고 부드러워요~ 성장기 아이들에게 좋은
+          고기파이!
+        </p>
+        <h3 class="list_of_ingredients">
+          <i class="xi-cart-remove"> 재료 목록</i>
+        </h3>
         <table>
           <thead>
             <th>재료</th>
@@ -222,38 +260,47 @@
           </tbody>
         </table>
 
-        <h3 class="main_cooking_order"><i class="xi-alarm-clock-o"> 조리 순서</i></h3>
+        <h3 class="main_cooking_order">
+          <i class="xi-alarm-clock-o"> 조리 순서</i>
+        </h3>
         <div class="cooking_order">
-        <ol>
-        <li>
-        돼지고기 안심은 칼을 이용해서 잘게 다진 후 청주, 생강즙, 소금,
-        후춧가루로 밑간을 해 주세요.
-        </li>
-        <li>
-        양파와 표고버섯은 듬성듬성 다져 주세요. 너무 잘게 다지면 씹는 식감이
-        떨어지니 굵게 다져 주세요. <br />
-        통조림 옥수수는 물에 살짝 씻어 물기를 제거해 주시고 할라페뇨 역시
-        잘게 다져 주세요. 파프리카도 굵게 다져 주세요.
-        </li>
-        <li>
-        분량의 재료를 넣고 소스를 만들어 주세요. 한국인의 입맛에 맞게 약간
-        매콤하게 만들었습니다.
-        </li>
-        </ol>  
-      </div>  
+          <ol>
+            <li>
+              돼지고기 안심은 칼을 이용해서 잘게 다진 후 청주, 생강즙, 소금,
+              후춧가루로 밑간을 해 주세요.
+            </li>
+            <li>
+              양파와 표고버섯은 듬성듬성 다져 주세요. 너무 잘게 다지면 씹는
+              식감이 떨어지니 굵게 다져 주세요. <br />
+              통조림 옥수수는 물에 살짝 씻어 물기를 제거해 주시고 할라페뇨 역시
+              잘게 다져 주세요. 파프리카도 굵게 다져 주세요.
+            </li>
+            <li>
+              분량의 재료를 넣고 소스를 만들어 주세요. 한국인의 입맛에 맞게 약간
+              매콤하게 만들었습니다.
+            </li>
+          </ol>
+        </div>
       </section>
 
-        <section>
-     <h2 title="상세레시피로 이동" class="main_name" id="papa"><a href="https://www.10000recipe.com/recipe/6879050" target="_blank">
-          해물파전</a></h2>
-        <img src="img/papa.png" alt="해물파전">
-        <br>
+      <section>
+        <h2 title="상세레시피로 이동" class="main_name" id="papa">
+          <a href="https://www.10000recipe.com/recipe/6879050" target="_blank">
+            해물파전</a
+          >
+        </h2>
+        <div class="img">
+          <img src="img/papa.png" alt="해물파전" />
+        </div>
+        <br />
         <p>
           바삭한 해물파전<br />
           비오는 날 해물파전<br />
           간단한 술안주 해물파전<br />
         </p>
-        <h3 class="list_of_ingredients"><i class = "xi-cart-remove"> 재료 목록</i></h3>
+        <h3 class="list_of_ingredients">
+          <i class="xi-cart-remove"> 재료 목록</i>
+        </h3>
         <table>
           <thead>
             <th>재료</th>
@@ -261,16 +308,20 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>밀가루 혹은<br>
-                부침가루
-              </strong></td>
+              <td>
+                <strong
+                  >밀가루 혹은<br />
+                  부침가루
+                </strong>
+              </td>
               <td><em>1/3bowl</em></td>
             </tr>
             <tr>
               <td><strong>물</strong></td>
               <td><em>1/2컵</em></td>
             </tr>
-            <tr>재료목록
+            <tr>
+              재료목록
 
               <td><strong>오징어</strong></td>
               <td><em>1/2마리</em></td>
@@ -280,35 +331,52 @@
               <td><em>1/2단</em></td>
             </tr>
           </tbody>
-        </table> 
-       <h3 class="main_cooking_order"><i class="xi-alarm-clock-o"> 조리 순서</i></h3>
-       <div class="cooking_order">
+        </table>
+        <h3 class="main_cooking_order">
+          <i class="xi-alarm-clock-o"> 조리 순서</i>
+        </h3>
+        <div class="cooking_order">
           <ol>
-            <li>쪽파는 500원짜리 동전크기로 준비하고,<br />
-              흐르는 물에 뿌리부분 껍질 하나씩 벗기며 씻어주고 뿌리 끝부분 잘라주세요.<br />
-              물기를 채반에 걸쳐 빼주세요.</li>
-            <li>물과 밀가루 또는 부침가루 비율을 1:1로 섞어주세요
-              </li>
-            <li>오징어도 1마리도 깨끗이 손질해준 뒤 원하는 크기로 잘라주세요.
-             </li>
-              <li>완성된 반죽에 부추+오징어 섞어 주세요.(순서 3번에 4,5번을 혼합)<br />
-                팬에 식용유를 두르고 달궈지면 혼합된 반죽을 올려 강불에 나두고 바삭하게 부치면 완성입니다.</li>
+            <li>
+              쪽파는 500원짜리 동전크기로 준비하고,<br />
+              흐르는 물에 뿌리부분 껍질 하나씩 벗기며 씻어주고 뿌리 끝부분
+              잘라주세요.<br />
+              물기를 채반에 걸쳐 빼주세요.
+            </li>
+            <li>물과 밀가루 또는 부침가루 비율을 1:1로 섞어주세요</li>
+            <li>
+              오징어도 1마리도 깨끗이 손질해준 뒤 원하는 크기로 잘라주세요.
+            </li>
+            <li>
+              완성된 반죽에 부추+오징어 섞어 주세요.(순서 3번에 4,5번을 혼합)<br />
+              팬에 식용유를 두르고 달궈지면 혼합된 반죽을 올려 강불에 나두고
+              바삭하게 부치면 완성입니다.
+            </li>
           </ol>
         </div>
-        </section>
-        <hr />
-        <section>
-            <h2 title="상세레시피로 이동" class="main_name" id="appleju"><a href="https://www.10000recipe.com/recipe/6867727" target="_blank"
-              class="main_name">당근사과주스</a></h2>
-            <img src="img/juice.jpg"
-             alt="당근사과주스">
-            <br />
-            <p>
+      </section>
+      <hr />
+      <section>
+        <h2 title="상세레시피로 이동" class="main_name" id="appleju">
+          <a
+            href="https://www.10000recipe.com/recipe/6867727"
+            target="_blank"
+            class="main_name"
+            >당근사과주스</a
+          >
+        </h2>
+        <div class="img">
+          <img src="img/juice.jpg" alt="당근사과주스" />
+        </div>
+        <br />
+        <p>
           미세먼지가 심한 요즘, 눈 건강도 신경쓰이시죠?<br />
           그래서 눈 건강을 위한 당근사과주스를 가지고 왔습니다. <br />
           건강한 눈을 위한 선택! 당근사과주스 한잔은 어떠세요?
-          </p>
-   <h3 class="list_of_ingredients"><i class = "xi-cart-remove"> 재료 목록</i></h3> 
+        </p>
+        <h3 class="list_of_ingredients">
+          <i class="xi-cart-remove"> 재료 목록</i>
+        </h3>
         <table>
           <thead>
             <th>재료</th>
@@ -337,30 +405,46 @@
             </tr>
           </tbody>
         </table>
-<h3 class="main_cooking_order"><i class="xi-alarm-clock-o"> 조리 순서</i></h3>
-<div class="cooking_order">
-    <ol>
-      <li>당근과 사과의 껍질을 벗겨주시고 토막토막 잘라주세요.</li>
-      <li>믹서기 통에 토막낸 당근과 사과를 담고 <br />
-        꿀과 물을 레몬즙을 취향에 맞게 부어줍니다.</li>
-    </ol> 
-  </div>
-    </section>
-    <aside>
-      <a href="https://cookatmarket.com/ko/product/detail?product_id=1492" target="_blank">
-        <img src="img/dduk.jpg" alt="구슬떡볶이">
-      </a><br>
-      <a href="https://cookatmarket.com/ko/product/detail?product_id=1388" target="_blank">
-        <img src="img/king.jpg" alt="낚지볶음">
-      </a><br>
-      <a href="https://cookatmarket.com/ko/product/detail?product_id=1433" target="_blank">
-        <img src="img/bbq.jpg" alt="바베큐족발">
-      </a>
-    </aside>
+        <h3 class="main_cooking_order">
+          <i class="xi-alarm-clock-o"> 조리 순서</i>
+        </h3>
+        <div class="cooking_order">
+          <ol>
+            <li>당근과 사과의 껍질을 벗겨주시고 토막토막 잘라주세요.</li>
+            <li>
+              믹서기 통에 토막낸 당근과 사과를 담고 <br />
+              꿀과 물을 레몬즙을 취향에 맞게 부어줍니다.
+            </li>
+          </ol>
+        </div>
+      </section>
+      <aside>
+        <a
+          href="https://cookatmarket.com/ko/product/detail?product_id=1492"
+          target="_blank"
+        >
+          <img src="img/dduk.jpg" alt="구슬떡볶이" /> </a
+        ><br />
+        <a
+          href="https://cookatmarket.com/ko/product/detail?product_id=1388"
+          target="_blank"
+        >
+          <img src="img/king.jpg" alt="낚지볶음" /> </a
+        ><br />
+        <a
+          href="https://cookatmarket.com/ko/product/detail?product_id=1433"
+          target="_blank"
+        >
+          <img src="img/bbq.jpg" alt="바베큐족발" />
+        </a>
+      </aside>
 
-    <footer>
-      <p><strong>경고: 지나친 음주는 뇌졸중, 기억력 손상이나 치매</strong>를 유발합니다.</p>
-    </footer>
-  </article>
+      <footer>
+        <p>
+          <strong>경고: 지나친 음주는 뇌졸중, 기억력 손상이나 치매</strong>를
+          유발합니다.
+        </p>
+      </footer>
+    </article>
   </body>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        border: 1px solid red;
+        margin: 20px;
+      }
+
+      .item {
+        border: 1px solid black;
+        text-align: center;
+        flex: 1 1 auto;
+        /* flex: 1 -> flex: 1 1 auto 같은 것 */
+      }
+      .start {
+        /* 교차축 정렬은 align-items으로 하는 것 */
+        align-items: flex-start;
+      }
+      .end {
+        align-items: flex-end;
+      }
+      .center {
+        align-items: center;
+      }
+      .gap-10 {
+        /* flex item간의 간격을 마진이나 패딩 대신에 간격을 직접 주는 법  */
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 교차축(cross-axis) stretch가 디폴트 -->
+    <div class="container gap-10" style="height: 100px">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="container start" style="height: 100px">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="container end" style="height: 100px">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="container center" style="height: 100px">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+  </body>
+</html>

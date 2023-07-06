@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 100px;
+        width: 100px;
+        background-color: green;
+
+        /* transition: s/ms(지속시간)
+           transition-duration: 1s;  같은 것 */
+        transition: 3s 2s;
+        /*  3s = 지속시간  / 2s = 지연시간  / 타이밍함수 */
+        /* 적용할 속성 / 지속시간 / 지연시간 / 타이밍함수 */
+
+        transition-timing-function: ease-in-out;
+        /* (가속o 속도x) */
+      }
+      div:hover {
+        /* width: 150px;
+        height: 150px; */
+        /* 위스 하이트값으로 하게 되면 트랜스폼될 때 밑 글자가 움직임  // 트랜스폼은 글자를 가림 */
+        transform: translateX(200px) rotate(90deg) scale(1.5) skewY(30deg);
+        /* transform:scale(배수값=실수) */
+        /* retate(회전) */
+
+        transform-origin: left;
+        /* 기준점 변경 / 기준은 센터센터임 */
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- transition(트렌지션): 속성 값의 변화가 있을 때 중간 과정을 표현해주는 것 -->
+    <!-- 속성값은 숫자이거나 숫자로 표현(변환)할 수 있는 경우 (16진수색표기/ 크기값 등) -->
+    <div></div>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias modi
+      adipisci aspernatur nesciunt consequuntur. Assumenda error eligendi
+      reiciendis porro in perspiciatis suscipit omnis illum accusamus. Laborum,
+      voluptatibus praesentium. In, nisi.
+    </p>
+  </body>
+</html>

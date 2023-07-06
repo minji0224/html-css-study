@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* @keyframes 애니메이션이름 {재생순서} */
+      @keyframes ani {
+        0% {
+          transform: translate(0px) rotate(0deg);
+          background-color: red;
+        }
+        25% {
+          transform: translate(100px, 0) rotate(90deg);
+          background-color: orange;
+        }
+        50% {
+          transform: translate(100px, 100px) rotate(180deg);
+          background-color: gray;
+        }
+        75% {
+          transform: translate(0, 100px) rotate(270deg);
+          background-color: rebeccapurple;
+        }
+        100% {
+          transform: translate(0, 0) rotate(360deg);
+          background-color: blue;
+        }
+      }
+
+      @keyframes ani2 {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(100px, 100px);
+        }
+      }
+      div:nth-of-type(1) {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        animation: ani 4s 2s linear infinite alternate;
+        /* animation : 키프레임이름, 재생시간, 타이밍함수 
+           alternate : 인피니트랑 짝궁 / 교대로 돌아감 처음 - 거꾸로 - 처음 - 거꾸로 */
+      }
+      div:nth-of-type(2) {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        animation: ani2 4s linear forwards;
+        /* forwards : 원래 상태로 돌아가지않고 유지하는 것 */
+        /* steps(숫자값): 불연속적으로 중간값을 잘라서 재생 */
+      }
+      div:hover {
+        /* 재생상태 */
+        animation-play-state: paused;
+        /* animation-play-state: running; */
+        /* 마우스 오버할 때 일시정지 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- css animation : 지정해 놓은 규칠에 따라서 재생되는 효과 -->
+    <!-- 규칙은 keyframe, 재생순서(sequence)단위로 지정한다
+      ex ) 0% 25% 50% 75% 100%   or    from/to -->
+    <!-- 트랜지션과 동일하게 각 구간의 중간과정을 적용해준다. -->
+    <div></div>
+    <div></div>
+  </body>
+</html>

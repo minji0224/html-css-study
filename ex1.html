@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        border: 1px solid black;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        border: 1px solid black;
+        display: flex;
+        height: 300px;
+      }
+      .one {
+        border: 1px solid black;
+        flex: 1;
+      }
+      .two {
+        border: 1px solid black;
+        /* flex-direction: column; */
+        display: flex;
+        flex: 2;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      span {
+        border: 1px solid black;
+        width: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="one"></div>
+      <div class="two">
+        <span class="two_item"></span>
+        <span class="two_item"></span>
+        <span class="two_item"></span>
+        <span class="two_item"></span>
+      </div>
+    </main>
+  </body>
+</html>
